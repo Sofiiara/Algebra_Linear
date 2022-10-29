@@ -1,0 +1,289 @@
+\documentclass[12pt,a4]{article}
+\usepackage[utf8]{inputenc} %Pacote para acentuação
+\usepackage[portuguese,brazilian]{babel}
+\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry} %Formato que lembra a ABNT
+\usepackage[T1]{fontenc} %Ajusta o texto que vem de outras fontes
+\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools,blindtext} %pacotes matemáticos
+
+\title{Reprova}
+\author{Beatriz Fernandes | Sofia Iara }
+\date{October 2022}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercício 1}
+ Considere as bases do R-espaço vetorial R³
+, A $=$ \{(4, 2, 0),(1, -1, 1),(5, 3, 3)\} e
+
+B $=$ \{(1, −2, 1),(1, 5, 2),(1, 0, 1)\}. Exiba as matrizes de mudança de base $M_{B \rightarrow A}$ e $ M_{A \rightarrow B}$. Escreva também os
+vetores abaixo nas bases indicadas:\\
+ 
+
+\bullet $v = (0, 1, 2)_{A}$ em B
+
+\bullet $v = (1, 3, −1)_{B}$ em A\\ \\
+Resposta:\\ \\
+A){(4,2,0),(1,-1,1),(5,3,3)}\\
+B){(1,-2,1),(1,5,2),(1,0,1)}\\ \\
+\bullet $M_{B \rightarrow A}$\\ \\
+\left[\begin{array}{ccc|c}
+4 & 1 & 5 & 1  \\
+2 & -1 & 3 & -2 \\
+0 & 1 & 3 & 1   \\
+\end{array}\right] \hspace{0.3cm}l_{2} + l_{3} \rightarrow l_{2}
+\left
+\begin{equation*}
+\left[\begin{array}{ccc|c}
+4 & 1 & 5 & 1 \\
+2 & 0 & 6 & -1\\
+0 & 1 & 3 & 1\\
+\end{array}\right] \hspace{0.3cm} l_{2}\leftrightarrow l_{1}
+\end{equation*}
+\left[
+\begin{array}{ccc|c}
+2 & 0 & 6 & -1 \\
+4 & 1 & 5 & 1 \\
+0 & 1 & 3 & 1 \\
+\end{array}\right] \hspace{0.3cm} l_{2} - 2 \cdot l_{1} \rightarrow l_{2}\newline\[\]
+\\ \\ \\
+\left[
+\begin{array}{ccc|c}
+2 & 0 & 6 & -1 \\
+0 & 1 & -7 & 1 \\
+0 & 1 & 3 & 1 \\
+\end{array}\right] \hspace {0.3cm} l_{2} - l_{3} \rightarrow l_{3}
+\left[
+\begin{array}{ccc|c}
+2 & 0 & 6 & -1  \\
+0  & 4 & -7 & 3 \\
+0 & 0 & 10 & -2 \\
+\end{array}\right] \hspace {0.3cm} 10 \cdot l_{2} - 7 \cdot l_{3} \rightarrow l_{2}\[\]\newline\[\]
+\left[
+\begin{array}{ccc|c}
+   2 & 0 & 6 & -1 \\
+    0 & 10 & 0 & 16 \\
+    0 & 0 & 10 & -2 \\
+\end{array}\right] \hspace {0.3cm} 10 \cdot l_{1} - 6 \cdot l_{3} \rightarrow l_{1}\[\]
+\left[
+\begin{array}{ccc|c}
+    20 & 0 & 0 & 2 \\
+    0 & 10 & 0 & 16 \\
+    0 & 0 & 10 & -2 \\
+\end{array}\right] \hspace {0.3cm} l_{1} / 20 \rightarrow l_{1}\[\]\newline\[\]
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 0 & \frac{2}{20} \\
+0 & 1 & 0 & \frac{16}{10} \\
+0 & 0 & 1 & \frac{-2}{10} \\
+\end{array}\right] \hspace {0.3cm} l_{2} / 10 \rightarrow l_{2} \hspace{1cm}
+\textbf{x = } \frac{2}{20} = \frac{1}{10},\hspace{0.3cm} \textbf{y = } \frac{16}{10} = \frac{8}{5},\hspace{0.3cm} \textbf{z = } \frac{-2}{10} = \frac{1}{5}
+\newpage
+\bullet$ M_{A \rightarrow B}$\newline \\
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 4  \\
+-2 & 5 & 0 & 2 \\
+1 & 2 & 1 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \leftarrow 5 \cdot l_{3} - 2 \cdot l_{2}
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 4  \\
+-2 & 5 & 0 & 2 \\
+9 & 0 & 5 & -4 \\
+\end{array}\right]\hspace{0.3cm} l_{1} \leftarrow 5 \cdot l_{1} - l_{2}\newline \\ \\
+\left[
+\begin{array}{ccc|c}
+7 & 0 & 5 & 18  \\
+-2 & 5 & 0 & 2 \\
+9 & 0 & 5 & 4 \\
+\end{array}\right]\hspace {0.3cm} l_{1} \leftarrow l_{1} - l_{3}
+\left[
+\begin{array}{ccc|c}
+-2 & 0 & 0 & 22 \\
+-2 & 5 & 0 & 2 \\
+9 & 0 & 5 & -4 \\
+\end{array}\right] \hspace{0.3cm} l_{2}\leftarrow l_{2} - l_{1}\newline \\ \\
+\left[
+\begin{array}{ccc|c}
+-2 & 0 & 0 & 22 \\
+0 & 5 & 0 & -20 \\
+9 & 0 & 5 & -4 \\
+\end{array}\right] \hspace{0.3cm} l_{3} \leftarrow 2 \cdot l_{3} + 9 \cdot l_{1}
+\left[
+\begin{array}{ccc|c}
+-2 & 0 & 0 & 22 \\
+0 & 5 & 0 & -20 \\
+0 & 0 & 10 & 190 \\
+\end{array}\right] \hspace{0.3cm} l_{1} \leftarrow l_{1} \div 2 \newline \\ \\
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 0 & -11 \\
+0 & 1 & 0 & -4 \\
+0 & 0 & 1 & 19 \\
+\end{array}\right]\hspace{0.3cm} l_{2} \leftarrow l_{2} \div 2
+\hspace{1cm}\textbf{x} = -11, \hspace{0.3cm} \textbf{y} = -4, \hspace{0.3cm} \textbf{z} = 19
+\section*{Exercício 2}
+Considere o conjunto $S$ = \{(1, 1, 1, 1, 1),(2, 0, -1, 1, 3),(3, 1, 0, 2, 4),(2, 2, 5, 8, -1),(0, 1, 0, 2, 3)\}.\\ \\
+(a) S é li ou ld?\\
+(b) S forma uma base do R-espaço vetorial R^5?\\ \\
+Resposta:\\ \\
+ a_{1} = (1,1,1,1,1)\\
+ a_{2} = (2,0,-1,1,3)\\
+ a_{3} = (2,1,0,2,4)\\
+ a_{4} = (2,2,5,8,-1)\\
+ a_{5} = (0,1,0,2,3)\\ \\
+a_{1} + 2a_{2} + 3a_{3} + 2a_{4} = 0\\
+a_{1} + a_{3} + 2a_{4} + a_{5} = 0\\
+a_{1} - a_{2} + 5a_{4} = 0\\
+a_{1} + a_{2} + 2a_{3} + 8a_{4} + 2a_{5} = 0\\
+a_{1} + 3a_{2} + 4a_3 - a_{4} + 3a_{3} = 0\\
+\newpage
+(a_{1} + 2a_{2} + 3a_{3} + 2a_{4} = 0, a_{1} + a_{3} + 2a_{4} + a_{5} = 0, a_{1} - a_{2} + 5a_{4} = 0, a_{1} + a_{2} + 2a_{3} + 8a_{4} + 2a_{3} = 0, a_{1} + 3a_{2} + 4a_{3} - a_{4} + 3a_{5} = 0)\\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+1 & 0 & 1 & 2 & 1 & 0 \\
+1 & -1 & 0 & 5 & 0 & 0 \\
+1 & 1 & 2 & 8 & 2 & 0 \\
+1 & 3 & 4 & -1 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{2} \rightarrow l_{2} - 1 \cdot l_{1}
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & -2 & -2 & 0 & 1 & 0 \\
+1 & -1 & 0 & 5 & 0 & 0 \\
+1 & 1 & 2 & 8 & 2 & 0 \\
+1 & 3 & 4 & -1 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \rightarrow l_{3} -1 \cdot l_{1}\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & -2 & -2 & 0 & 1 & 0 \\
+0 & -3 & -3 & 3 & 0 & 0 \\
+1 & 1 & 2 & 8 & 2 & 0 \\
+1 & 3 & 4 & -1 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{4} \rightarrow l_{4} - 1 \cdot l_{1}
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & -2 & -2 & 0 & 1 & 0 \\
+0 & -3 & -3 & 3 & 0 & 0 \\
+0 & -1 & -1 & 6 & 2 & 0 \\
+1 & 3 & 4 & -1 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{5} -1 \cdot l_{1}\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & -2 & -2 & 0 & 1 & 0 \\
+0 & -3 & -3 & 3 & 0 & 0 \\
+0 & -1 & -1 & 6 & 2 & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{2} \rightarrow l_{2} \cdot (\frac{-1}{2})
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 \frac{-1}{2} & 0 \\
+0 & -3 & -3 & 3 & 0 & 0 \\
+0 & -1 & -1 & 6 & 2 & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \rightarrow l_{3} \cdot (\frac{-1}{3})\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0 \\
+0 & 1 & 1 & 0  & \frac{-1}{2} & 0 \\
+0 & 1 & 1 & -1 & 0 & 0 \\
+0 & -1 & -1 & 6 & 2 & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{4} \rightarrow l_{4} \cdot (-1)
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 1 & 1 & -1 & 0 & 0 \\
+0 & 1 & 1 & -6 & -2 & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \rightarrow l_{3} - 1 \cdot l_{2}\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+0 & 1 & 1 & -6 & -2 & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{4} \rightarrow l_{2} \cdot l_{4} - 1
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & -6 & \frac{-3}{2} & 0 \\
+0 & 1 & 1 & -3 & 3 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{2} \cdot l_{5} -1\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & -6 & \frac{-3}{2} & 0 \\
+0 & 0 & 0 & -3 & \frac{7}{2} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \rightarrow l_{3} \cdot (-1)
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & -6 & \frac{-3}{2} & 0 \\
+0 & 0 & 0 & -3 & \frac{7}{2} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{3} \rightarrow l_{4} \cdot (\frac{-1}{6})
+\newpage
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0 \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{1}{4} & 0 \\
+0 & 0 & 0 & -3 & \frac{7}{2} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{5} \cdot (\frac{-1}{3})
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{1}{4} & 0 \\
+0 & 0 & 0 & 1 & \frac{-7}{6} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{3} \cdot l_{5} -1\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 0 & \frac{3}{4} & 0 \\
+0 & 0 & 0 & 0 & \frac{-2}{3} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{4} \rightarrow l_{4} \cdot \frac{4}{3}
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0 \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & \frac{-2}{3} & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{5} \cdot (\frac{-3}{2})\newline \\ \\
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0  \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+\end{array}\right]\hspace{0.3cm} l_{5} \rightarrow l_{4} \cdot l_{5} - 1
+\left[
+\begin{array}{ccccc|c}
+1 & 2 & 3 & 2 & 0 & 0 \\
+0 & 1 & 1 & 0 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 1 & \frac{-1}{2} & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+\end{array}\right]\hspace{0.3cm}
+\end{document}
